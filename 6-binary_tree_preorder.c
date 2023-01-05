@@ -4,6 +4,7 @@
  * binary_tree_preorder - Visits every node in
  * the 'tree' node parameter, treating the
  * node as a root, and calls '(*func)(current_node->n)'
+ * in a pre-order fashion.
  *
  * @tree: tree to go through nodes in
  * If it's NULL, the function just exits immediatly.
