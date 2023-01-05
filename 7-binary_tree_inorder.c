@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_preorder - Visits every node in
+ * binary_tree_inorder - Visits every node in
  * the 'tree' node parameter, treating the
  * node as a root, and calls '(*func)(current_node->n)'
  *
@@ -13,13 +13,13 @@
  *
  * Return: nothing
  */
-void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
-	if (tree && func)
+	if (tree)
 	{
+		binary_tree_inorder(tree->left, func);
 		func(tree->n);
-		binary_tree_preorder(tree->left, func);
-		binary_tree_preorder(tree->right, func);
+		binary_tree_inorder(tree->right, func);
 	}
 }
 
