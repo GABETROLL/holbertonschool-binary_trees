@@ -1,9 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_nodes - Counts all nodes in tree
- * 'tree', treating the 'tree' node as the root,
- * that have AT LEAST ONE CHILD.
+ * binary_tree_nodes - Counts all NON-leaf nodes in tree
+ * 'tree', treating the 'tree' node as the root.
  *
  * If tree is NULL or if tree has no children,
  * result is 0.
@@ -12,9 +11,8 @@
  *
  * @tree: root node of tree to count nodes in
  *
- * Return: Count of all nodes with at least one
- * child in tree 'tree', with the 'tree' node
- * as root
+ * Return: Count of all NON-leaf nodes in tree 'tree',
+ * with the 'tree' node as root
  */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
