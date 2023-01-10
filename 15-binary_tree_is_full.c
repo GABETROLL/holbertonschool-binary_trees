@@ -23,7 +23,8 @@ int binary_tree_is_full(const binary_tree_t *tree)
 		 * the condition hasn't been broken yet.
 		 */
 		if (tree->left && tree->right)
-			return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
+			return (binary_tree_is_full(tree->left)
+					&& binary_tree_is_full(tree->right));
 	}
 	/* condition broken or 'tree' is NULL */
 	return (0);
