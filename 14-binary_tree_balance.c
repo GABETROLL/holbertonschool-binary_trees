@@ -8,6 +8,10 @@
  * THIS WAS COPIED FROM EXERCISE 9 TO PASS HOLBERTON'S
  * COMPILATION PROCESS
  *
+ * (the function was modified to give height 1 when
+ * the tree is only one node, unlike the function in exercise
+ * 9)
+ *
  * @tree: tree
  *
  * Return: the max height of the node 'tree' if 'tree'
@@ -15,7 +19,7 @@
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	if (tree && (tree->left || tree->right))
+	if (tree)
 	{
 		size_t left_child_height = binary_tree_height(tree->left);
 		size_t right_child_height = binary_tree_height(tree->right);
