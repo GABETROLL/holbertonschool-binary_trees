@@ -20,6 +20,10 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 		binary_tree_t *left = node->parent->left;
 		binary_tree_t *right = node->parent->right;
 
+		/*
+		 * return the node's parent's child
+		 * that's not the node
+		 */
 		if (left == node)
 			return (right);
 		return (left);
