@@ -1,12 +1,12 @@
 #include "binary_trees.h"
 
 /**
- * THIS FUNCTION WAS COPIED FROM THE 9TH EXERCISE
- * FILE:
- *
  * binary_tree_height - Finds the height of the
  * node 'tree' (aka how far away is the farthest
  * leaf child of 'tree')
+ *
+ * THIS FUNCTION WAS COPIED FROM THE 9TH EXERCISE
+ * FILE:
  *
  * @tree: tree
  *
