@@ -23,6 +23,9 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 		/*
 		 * return the node's parent's child
 		 * that's not the node
+		 *
+		 * Even if the sibling's pointer in the father
+		 * is NULL, we can still return it!
 		 */
 		if (left == node)
 			return (right);

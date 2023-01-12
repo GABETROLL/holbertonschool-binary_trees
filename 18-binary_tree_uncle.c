@@ -12,23 +12,28 @@
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
+	binary_tree_t *left;
+	binary_tree_t *right;
+
 	if (!node)
 		return (NULL);
 	if (!node->parent)
 		return (NULL);
+	if (!node->parent->parent)
+		return (NULL);
 
-	if (node->parent->parent)
-	{
-		binary_tree_t *left = node->parent->parent->left;
-		binary_tree_t *right = node->parent->parent->right;
+	left = node->parent->parent->left;
+	right = node->parent->parent->right;
 
-		/*
-		 * return the node's parent's parent's child
-		 * that's not the node's parent.
-		 */
-		if (left == node->parent)
-			return (right);
-		return (left);
-	}
+	/*
+	 * return the node's parent's parent's child
+	 * that's not the node's parent.
+	 *
+	 * Even if the uncle pointer in the grandfather
+	 * is NULL, we can still return it!
+	 */
+	if (left == node->parent)
+		return (right);
+	return (left);
 }
 
